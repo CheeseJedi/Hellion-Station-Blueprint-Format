@@ -201,9 +201,5 @@ $RECYCLE.BIN/
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
 
-/HELLION.Explorer/HELLION.Explorer_TemporaryKey.pfx
-/Resources
-.sln
-.csproj
-/Hellion-Station-Blueprint-Format.csproj
-/Hellion-Station-Blueprint-Format.sln
+*.sln
+*.csproj
