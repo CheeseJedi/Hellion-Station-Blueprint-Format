@@ -9,11 +9,11 @@
         "SceneName": "AltCorp_CorridorModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]
@@ -24,15 +24,15 @@
         "SceneName": "AltCorp_CorridorIntersectionModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
             {
-                "PortName": "DockC",
+                "PortName": "StandardDockingPortC",
                 "PortID": 5
             }
         ]
@@ -43,11 +43,11 @@
         "SceneName": "AltCorp_Corridor45TurnModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]
@@ -58,7 +58,7 @@
         "SceneName": "AltCorp_Shuttle_SARA",
         "DockingPorts": [
             {
-                "PortName": "AirlockDock",
+                "PortName": "AirlockDockingPort",
                 "PortID": 1
             }
             {
@@ -73,11 +73,11 @@
         "SceneName": "ALtCorp_PowerSupply_Module",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]
@@ -88,47 +88,47 @@
         "SceneName": "AltCorp_LifeSupportModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]
     }
     {
-        // INCOMPLETE
+        // VERIFIED
         "SanitisedName": "CBM",
         "ItemID": 9,
         "SceneName": "AltCorp_Cargo_Module",
         "DockingPorts": [
             {
-                "PortName": "",
+                "PortName": "IndustrialContainerPortA",
                 "PortID": 6
             }
             {
-                "PortName": "",
+                "PortName": "IndustrialContainerPortB",
                 "PortID": 14
             }
             {
-                "PortName": "",
+                "PortName": "IndustrialContainerPortD",
                 "PortID": 15
             }
             {
-                "PortName": "",
+                "PortName": "IndustrialContainerPortC",
                 "PortID": 16
             }
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 13
             }
             {
-                "PortName": "",
+                "PortName": "CargoDockingPortB",
                 "PortID": 8
             }
             {
-                "PortName": "",
+                "PortName": "CargoDockingPortA",
                 "PortID": 12
             }
         ]
@@ -139,34 +139,35 @@
         "SceneName": "AltCorp_CorridorVertical",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 2
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 3
             }
         ]
     }
     {
-        "SanitisedName": "CM",
+        // VERIFIED
+		"SanitisedName": "CM",
         "ItemID": 11,
         "SceneName": "AltCorp_Command_Module",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortD",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
             {
-                "PortName": "DockC",
+                "PortName": "StandardDockingPortC",
                 "PortID": 5
             }
             {
-                "PortName": "DockD",
+                "PortName": "StandardDockingPortA",
                 "PortID": 6
             }
         ]
@@ -177,11 +178,11 @@
         "SceneName": "AltCorp_Corridor45TurnRightModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]
@@ -192,11 +193,11 @@
         "SceneName": "AltCorp_StartingModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]
@@ -207,11 +208,11 @@
         "SceneName": "AltCorp_Airlock_Module",
         "DockingPorts": [
             {
-                "PortName": "AirlockDock",
+                "PortName": "AirlockDockingPort",
                 "PortID": 1
             }
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
         ]
@@ -263,7 +264,7 @@
         "SceneName": "AltCorp_CrewQuarters_Module",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 2
             }
         ]
@@ -292,11 +293,11 @@
         "SceneName": "AltCorp_SolarPowerModule",
         "DockingPorts": [
             {
-                "PortName": "DockA",
+                "PortName": "StandardDockingPortA",
                 "PortID": 3
             }
             {
-                "PortName": "DockB",
+                "PortName": "StandardDockingPortB",
                 "PortID": 4
             }
         ]

@@ -32,14 +32,14 @@
             "StructureType": "OUTPOST",
             "DockingPorts": [
                 {
-                    "PortName": "DockA",
+                    "PortName": "StandardDockingPortA",
                     "DockedStructureID": 1,
-                    "DockedPortName": "DockA"
+                    "DockedPortName": "StandardDockingPortA"
                 },
                 {
-                    "PortName": "DockB",
+                    "PortName": "StandardDockingPortB",
                     "DockedStructureID": 2,
-                    "DockedPortName": "DockA"
+                    "DockedPortName": "StandardDockingPortA"
                 }
             ]
         },
@@ -48,9 +48,9 @@
             "StructureType": "CQM",
             "DockingPorts": [
                 {
-                    "PortName": "DockA",
+                    "PortName": "StandardDockingPortA",
                     "DockedStructureID": 0,
-                    "DockedPortName": "DockA"
+                    "DockedPortName": "StandardDockingPortA"
                 }
             ]
         },
@@ -59,14 +59,14 @@
             "StructureType": "AM",
             "DockingPorts": [
                 {
-                    "PortName": "DockA",
+                    "PortName": "StandardDockingPortA",
                     "DockedStructureID": 0,
-                    "DockedPortName": "DockB"
+                    "DockedPortName": "StandardDockingPortB"
                 },
                 {
-                    "PortName": "AirlockDock",
+                    "PortName": "AirlockDockingPort",
                     "DockedStructureID": 3,
-                    "DockedPortName": "AirlockDock"
+                    "DockedPortName": "AirlockDockingPort"
                 }
             ]
         },
@@ -75,9 +75,9 @@
             "StructureType": "ARG",
             "DockingPorts": [
                 {
-                    "PortName": "AirlockDock",
+                    "PortName": "AirlockDockingPort",
                     "DockedStructureID": 2,
-                    "DockedPortName": "AirlockDock"
+                    "DockedPortName": "AirlockDockingPort"
                 },
                 {
                     "PortName": "Grapple",
