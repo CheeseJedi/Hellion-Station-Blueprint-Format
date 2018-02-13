@@ -1,0 +1,111 @@
+/*
+ Hellion-Station-Blueprint-Format/Example_Blueprint.json
+ v0.2
+ Part of a community proposal for a JSON based file format for the interchange of Hellion station 'blueprints'.
+ Contributors: CheeseJedi, GLotsapot, Yozheek
+
+ Notes:
+ 
+ * The blueprint data is encapsulated in a Json object.
+ 
+ * A single blueprint object is expected per file, and use of the file extension .hsbp.json is recommended to
+ aid in identifying the file type as a blueprint when on the file system and prior to loading etc.
+ 
+  * The __ObjectType property exists to aid in identifying the type of this object when looking at a serialised
+ version of it out of context and is expected to be set to "__ObjectType": "StationBlueprint"
+
+ * The Version property represents the version of the format that this blueprint is based on and should match
+ the version number of the StructuresDefinition.json file used as a reference to create the blueprint.
+
+ * The Name property should contain a name to identify the blueprint - possibly the in-game station Name if the
+ was generated from an in-game station.
+
+ * The LinkURI property can contain a URI to an online resource but is optional. If it is set the value should
+ contain a valid Internet URI, including protocol identifier (http:// or https:// for example), otherwise an
+ empty string is expected.
+ 
+ * The StructureID is a unique sequential number, starting at zero, assigned to each module or ship.
+ As the docking structure within the game is represented as a tree, the root node of this tree, i.e. the first
+ module placed must have the StructureID of zero. Once represented in-game  (in the .save file) this module must
+ not be docked *to* anything - in other words, only have *other* modules docked to *it*.
+
+ * Docking relationships must be represented on both sides of the join in the corresponding DockingPorts section
+ of each module in the docked pair.
+
+ * The DockedStructureID is either null (if nothing docked to that port) or the StructureID of the module that is
+ docked. 
+
+ * If the DockedStructureID is a non-null value, the DockedPortName value must also be populated, representing
+ PortName of the port this port is docked to, and the corresponding relationship must be similarly indicated in
+ the other module or ship in the docked pair in order for the docking representation to be considered complete.
+ 
+ * In the case of a null DockedStructureID, an empty string value would be expected for the DockedPortName and
+ any value there should be ignored.
+*/
+{
+	"__ObjectType": "StationBlueprint",
+	"Version": 0.2,
+    "Name": "Example Station - OUTPOST, CQM, AM and ARG",
+	"LinkURI": "http://gametools.online/hellion/hsp/#bmcahioa",
+    "Structures": [
+        {
+            "StructureID": 0,
+            "StructureType": "OUTPOST",
+            "DockingPorts": [
+                {
+                    "PortName": "StandardDockingPortA",
+                    "DockedStructureID": 1,
+                    "DockedPortName": "StandardDockingPortA"
+                },
+                {
+                    "PortName": "StandardDockingPortB",
+                    "DockedStructureID": 2,
+                    "DockedPortName": "StandardDockingPortA"
+                }
+            ]
+        },
+        {
+            "StructureID": 1,
+            "StructureType": "CQM",
+            "DockingPorts": [
+                {
+                    "PortName": "StandardDockingPortA",
+                    "DockedStructureID": 0,
+                    "DockedPortName": "StandardDockingPortA"
+                }
+            ]
+        },
+        {
+            "StructureID": 2,
+            "StructureType": "AM",
+            "DockingPorts": [
+                {
+                    "PortName": "StandardDockingPortA",
+                    "DockedStructureID": 0,
+                    "DockedPortName": "StandardDockingPortB"
+                },
+                {
+                    "PortName": "AirlockDockingPort",
+                    "DockedStructureID": 3,
+                    "DockedPortName": "AirlockDockingPort"
+                }
+            ]
+        },
+        {
+            "StructureID": 3,
+            "StructureType": "ARG",
+            "DockingPorts": [
+                {
+                    "PortName": "AirlockDockingPort",
+                    "DockedStructureID": 2,
+                    "DockedPortName": "AirlockDockingPort"
+                },
+                {
+                    "PortName": "Grapple",
+                    "DockedStructureID": null,
+                    "DockedPortName": ""
+                }
+            ]
+        }
+    ]
+}
