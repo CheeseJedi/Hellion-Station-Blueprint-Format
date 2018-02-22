@@ -12,4 +12,4 @@ bi-directional manner.
 Note this is **not a data export format** for HELLION Dedicated Server .save files as it does not describe the
 condition, inventory or other state of any of the modules.
 
-Contributors: CheeseJedi, GLotsapot, Yozheek
+Contributors: CheeseJedi, GLotsapot, Yozheek, Zero Gravity

@@ -1,325 +1,377 @@
 /*
- Hellion-Station-Blueprint-Format/StructureDefinitions.json
- v0.2
- Part of a community proposal for a JSON based file format for the interchange of Hellion station 'blueprints'.
- Contributors: CheeseJedi, GLotsapot, Yozheek
+  Hellion-Station-Blueprint-Format/StructureDefinitions.json
+  v0.3
+  Part of a community proposal for a JSON based file format for the interchange of Hellion station 'blueprints'.
+  Contributors: CheeseJedi, GLotsapot, Yozheek, Zero Gravity
 
- Defines the SanitisedName for each module and includes the in-game ItemID, SceneName and PortID for reference purposes.
- Note that 0.2 introduces this list as an object with a type definition and a version number.
+  Defines the SanitisedName for each module (based on in-game designation) and to be used when referencing module types
+  in blueprints. Also included are the in-game ItemID (important!) and SceneName (reference/sanity check) to aid in
+  identifying for reference purposes.
 
- UNLESS OTHERWISE MARKED ALL PORT ID/NAME COMBINATIONS ARE TO BE CONSIDERD PRELIMINARY AND NEED TO BE VERIFIED IN-GAME
+  Also defines for each module it's list of docking ports and the 'sanitised' names (based on in-game names) to be used
+  when referencing ports in blueprints. Note that 0.2 introduces this list as an Json Object with a type definition and
+  a version number.
+
+  v0.3 adds the OrderID field at the request of Zero Gravity. The OrderID value for each docking port must be included 
+  in the port definitions in blueprints, set as per the port definition in this list. Refer to the following json file
+  that accompanies this specification (Example_Blueprint.hsbp.json) to see this in practice.
+
+  UNLESS OTHERWISE MARKED ALL PORT ID/NAME COMBINATIONS ARE TO BE CONSIDERD PRELIMINARY AND NEED TO BE VERIFIED IN-GAME
 */
 {
-	"__ObjectType": "BlueprintStructureDefinitions",
-	"Version": 0.2,
-	"StructureDefinitions": [
-		{
-			"SanitisedName": "CIM",
-			"ItemID": 3,
-			"SceneName": "AltCorp_CorridorModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			"SanitisedName": "CTM",
-			"ItemID": 4,
-			"SceneName": "AltCorp_CorridorIntersectionModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				},
-				{
-					"PortName": "StandardDockingPortC",
-					"PortID": 5
-				}
-			]
-		},
-		{
-			"SanitisedName": "CLM",
-			"ItemID": 5,
-			"SceneName": "AltCorp_Corridor45TurnModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			"SanitisedName": "ARG",
-			"ItemID": 6,
-			"SceneName": "AltCorp_Shuttle_SARA",
-			"DockingPorts": [
-				{
-					"PortName": "AirlockDockingPort",
-					"PortID": 1
-				},
-				{
-					"PortName": "Grapple",
-					"PortID": 2
-				}
-			]
-		},
-		{
-			"SanitisedName": "PSM",
-			"ItemID": 7,
-			"SceneName": "ALtCorp_PowerSupply_Module",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			"SanitisedName": "LSM",
-			"ItemID": 8,
-			"SceneName": "AltCorp_LifeSupportModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			// VERIFIED
-			"SanitisedName": "CBM",
-			"ItemID": 9,
-			"SceneName": "AltCorp_Cargo_Module",
-			"DockingPorts": [
-				{
-					"PortName": "IndustrialContainerPortA",
-					"PortID": 6
-				},
-				{
-					"PortName": "IndustrialContainerPortB",
-					"PortID": 14
-				},
-				{
-					"PortName": "IndustrialContainerPortD",
-					"PortID": 15
-				},
-				{
-					"PortName": "IndustrialContainerPortC",
-					"PortID": 16
-				},
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 13
-				},
-				{
-					"PortName": "CargoDockingPortB",
-					"PortID": 8
-				},
-				{
-					"PortName": "CargoDockingPortA",
-					"PortID": 12
-				}
-			]
-		},
-		{
-			"SanitisedName": "CSM",
-			"ItemID": 10,
-			"SceneName": "AltCorp_CorridorVertical",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 2
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 3
-				}
-			]
-		},
-		{
-			// VERIFIED
-			"SanitisedName": "CM",
-			"ItemID": 11,
-			"SceneName": "AltCorp_Command_Module",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortD",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				},
-				{
-					"PortName": "StandardDockingPortC",
-					"PortID": 5
-				},
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 6
-				}
-			]
-		},
-		{
-			"SanitisedName": "CRM",
-			"ItemID": 12,
-			"SceneName": "AltCorp_Corridor45TurnRightModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			// VERIFIED
-			"SanitisedName": "OUTPOST",
-			"ItemID": 13,
-			"SceneName": "AltCorp_StartingModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			// VERIFIED
-			"SanitisedName": "AM",
-			"ItemID": 14,
-			"SceneName": "AltCorp_Airlock_Module",
-			"DockingPorts": [
-				{
-					"PortName": "AirlockDockingPort",
-					"PortID": 1
-				},
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				}
-			]
-		},
-		{
-			"SanitisedName": "DERELICT15",
-			"ItemID": 15,
-			"SceneName": "Generic_Debris_Module_JuncRoom001",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "DERELICT16",
-			"ItemID": 16,
-			"SceneName": "Generic_Debris_Module_JuncRoom002",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "DERELICT17",
-			"ItemID": 17,
-			"SceneName": "Generic_Debris_Module_Corridor001",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "DERELICT18",
-			"ItemID": 18,
-			"SceneName": "Generic_Debris_Module_Corridor002",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "IC",
-			"ItemID": 19,
-			"SceneName": "AltCorp_DockableContainer",
-			"DockingPorts": [
-				{
-					"PortName": "CargoDock",
-					"PortID": 1
-				}
-			]
-		},
-		{
-			"SanitisedName": "DERELICT21",
-			"ItemID": 21,
-			"SceneName": "Generic_Debris_Outpost001",
-			"DockingPorts": [ ]
-		},
-		{
-			// VERIFIED
-			"SanitisedName": "CQM",
-			"ItemID": 22,
-			"SceneName": "AltCorp_CrewQuarters_Module",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 2
-				}
-			]
-		},
-		{
-			"SanitisedName": "DERELICT23",
-			"ItemID": 23,
-			"SceneName": "Generic_Debris_Spawn1",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "DERELICT124",
-			"ItemID": 24,
-			"SceneName": "Generic_Debris_Spawn2",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "DERELICT25",
-			"ItemID": 25,
-			"SceneName": "Generic_Debris_Spawn3",
-			"DockingPorts": [ ]
-		},
-		{
-			"SanitisedName": "SPM",
-			"ItemID": 26,
-			"SceneName": "AltCorp_SolarPowerModule",
-			"DockingPorts": [
-				{
-					"PortName": "StandardDockingPortA",
-					"PortID": 3
-				},
-				{
-					"PortName": "StandardDockingPortB",
-					"PortID": 4
-				}
-			]
-		},
-		{
-			"SanitisedName": "PREFABS01",
-			"ItemID": 20,
-			"SceneName": "Prefabs01",
-			"DockingPorts": [ ]
-		}
-	]
+  "__ObjectType": "BlueprintStructureDefinitions",
+  "Version": 0.3,
+  "StructureDefinitions": [
+    {
+      "SanitisedName": "CIM",
+      "ItemID": 3,
+      "SceneName": "AltCorp_CorridorModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "CTM",
+      "ItemID": 4,
+      "SceneName": "AltCorp_CorridorIntersectionModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 3
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        },
+        {
+          "PortName": "StandardDockingPortC",
+          "PortID": 5,
+          "OrderID": 2
+        }
+      ]
+    },
+    {
+      "SanitisedName": "CLM",
+      "ItemID": 5,
+      "SceneName": "AltCorp_Corridor45TurnModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "ARG",
+      "ItemID": 6,
+      "SceneName": "AltCorp_Shuttle_SARA",
+      "DockingPorts": [
+        {
+          "PortName": "AirlockDockingPort",
+          "PortID": 1,
+          "OrderID": 1
+        },
+        {
+          "PortName": "Grapple",
+          "PortID": 2,
+          "OrderID": 2
+        }
+      ]
+    },
+    {
+      "SanitisedName": "PSM",
+      "ItemID": 7,
+      "SceneName": "ALtCorp_PowerSupply_Module",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "LSM",
+      "ItemID": 8,
+      "SceneName": "AltCorp_LifeSupportModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 1
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 2
+        }
+      ]
+    },
+    {
+      "SanitisedName": "CBM",
+      "ItemID": 9,
+      "SceneName": "AltCorp_Cargo_Module",
+      "DockingPorts": [
+        {
+          "PortName": "IndustrialContainerPortA",
+          "PortID": 6,
+          "OrderID": 4
+        },
+        {
+          "PortName": "IndustrialContainerPortB",
+          "PortID": 14,
+          "OrderID": 5
+        },
+        {
+          "PortName": "IndustrialContainerPortD",
+          "PortID": 15,
+          "OrderID": 6
+        },
+        {
+          "PortName": "IndustrialContainerPortC",
+          "PortID": 16,
+          "OrderID": 7
+        },
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 13,
+          "OrderID": 1
+        },
+        {
+          "PortName": "CargoDockingPortB",
+          "PortID": 8,
+          "OrderID": 3
+        },
+        {
+          "PortName": "CargoDockingPortA",
+          "PortID": 12,
+          "OrderID": 2
+        }
+      ]
+    },
+    {
+      "SanitisedName": "CSM",
+      "ItemID": 10,
+      "SceneName": "AltCorp_CorridorVertical",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 2,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 3,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "CM",
+      "ItemID": 11,
+      "SceneName": "AltCorp_Command_Module",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortD",
+          "PortID": 3,
+          "OrderID": 4
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortC",
+          "PortID": 5,
+          "OrderID": 1
+        },
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 6,
+          "OrderID": 3
+        }
+      ]
+    },
+    {
+      "SanitisedName": "CRM",
+      "ItemID": 12,
+      "SceneName": "AltCorp_Corridor45TurnRightModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "OUTPOST",
+      "ItemID": 13,
+      "SceneName": "AltCorp_StartingModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "AM",
+      "ItemID": 14,
+      "SceneName": "AltCorp_Airlock_Module",
+      "DockingPorts": [
+        {
+          "PortName": "AirlockDockingPort",
+          "PortID": 1,
+          "OrderID": 1
+        },
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        }
+      ]
+    },
+    {
+      "SanitisedName": "DERELICT15",
+      "ItemID": 15,
+      "SceneName": "Generic_Debris_Module_JuncRoom001",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "DERELICT16",
+      "ItemID": 16,
+      "SceneName": "Generic_Debris_Module_JuncRoom002",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "DERELICT17",
+      "ItemID": 17,
+      "SceneName": "Generic_Debris_Module_Corridor001",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "DERELICT18",
+      "ItemID": 18,
+      "SceneName": "Generic_Debris_Module_Corridor002",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "IC",
+      "ItemID": 19,
+      "SceneName": "AltCorp_DockableContainer",
+      "DockingPorts": [
+        {
+          "PortName": "CargoDock",
+          "PortID": 1,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "DERELICT21",
+      "ItemID": 21,
+      "SceneName": "Generic_Debris_Outpost001",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "CQM",
+      "ItemID": 22,
+      "SceneName": "AltCorp_CrewQuarters_Module",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 2,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "DERELICT23",
+      "ItemID": 23,
+      "SceneName": "Generic_Debris_Spawn1",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "DERELICT124",
+      "ItemID": 24,
+      "SceneName": "Generic_Debris_Spawn2",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "DERELICT25",
+      "ItemID": 25,
+      "SceneName": "Generic_Debris_Spawn3",
+      "DockingPorts": []
+    },
+    {
+      "SanitisedName": "SPM",
+      "ItemID": 26,
+      "SceneName": "AltCorp_SolarPowerModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 3,
+          "OrderID": 2
+        },
+        {
+          "PortName": "StandardDockingPortB",
+          "PortID": 4,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "FM",
+      "ItemID": 28,
+      "SceneName": "AltCorp_FabricatorModule",
+      "DockingPorts": [
+        {
+          "PortName": "StandardDockingPortA",
+          "PortID": 1,
+          "OrderID": 1
+        }
+      ]
+    },
+    {
+      "SanitisedName": "PREFABS01",
+      "ItemID": 20,
+      "SceneName": "Prefabs01",
+      "DockingPorts": []
+    }
+  ]
 }
